@@ -61,6 +61,7 @@
 
 body {
   background-color: var(--text-color-dark);
+  overflow-x: hidden;
 }
 
 a {
@@ -141,11 +142,17 @@ header .nav-account #register:hover {
 }
 
 .first-screen {
+  position: relative;
   background-color: var(--text-color-dark);
-  padding-bottom: 200px;
+  margin-bottom: 200px;
 }
-.first-screen .col-6 {
+.first-screen .col {
   padding-top: 131px;
+  position: relative;
+  z-index: 2;
+}
+.first-screen .first-screen_action {
+  animation-delay: 2s;
 }
 .first-screen .first-screen_action .base {
   display: flex;
@@ -187,6 +194,7 @@ header .nav-account #register:hover {
   line-height: 28px;
   letter-spacing: 0.16px;
   color: var(--text-color);
+  animation-delay: 0.5s;
 }
 .first-screen .first-screen_button {
   margin-top: 32px;
@@ -199,6 +207,7 @@ header .nav-account #register:hover {
   color: var(--text-color);
   font-size: 18px;
   font-weight: 500;
+  animation-delay: 1s;
 }
 .first-screen .first-screen_button svg {
   width: 32px;
@@ -208,6 +217,7 @@ header .nav-account #register:hover {
   border-radius: 16px;
 }
 .first-screen .first-screen_button:hover {
+  cursor: pointer;
   background-color: #fff;
   color: black;
 }
@@ -217,16 +227,111 @@ header .nav-account #register:hover {
 .first-screen .first-screen_button:hover svg path {
   fill: #fff;
 }
+.first-screen .first-screen_img {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 37px;
+  animation-duration: 3s;
+}
+.first-screen .first-screen_img svg {
+  position: absolute;
+  right: 1px;
+  bottom: 0;
+}
+.first-screen .first-screen_img svg .img-animation_svg {
+  animation-duration: 7s;
+  animation-delay: 2s;
+  animation-timing-function: linear;
+  animation-name: svg_first-screen_an;
+  animation-iteration-count: infinite;
+}
+@keyframes svg_first-screen_an {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(0px, -30px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+.first-screen .first-screen_img svg .svg1 {
+  animation-delay: 2s;
+}
+.first-screen .first-screen_img svg .svg2 {
+  animation-delay: 3s;
+}
+.first-screen .first-screen_img svg .svg3 {
+  animation-delay: 4s;
+}
+.first-screen .first-screen_img svg .svg_bitcon {
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 7s;
+  animation-name: bitcon_svg-an_first-screen;
+}
+@keyframes bitcon_svg-an_first-screen {
+  0% {
+    fill: #42E8E0;
+  }
+  50% {
+    fill: #732ccf;
+  }
+  100% {
+    fill: #42E8E0;
+  }
+}
+.first-screen .first-screen_bg {
+  position: absolute;
+  right: 0;
+  bottom: -80px;
+}
+.first-screen .first-screen_bg1 {
+  position: absolute;
+  right: 356px;
+  bottom: -250px;
+}
 
-/*.first-screen::before{
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: -10px;
-    width: 100%;
-    height: 100%;
-    background-image: url(../assets/img/first-screen_before.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-}*/
+@media screen and (max-width: 991px) {
+  header .nav-list {
+    margin: 0 auto;
+    padding: 12px;
+  }
+  header .nav-account {
+    margin: 10px auto 0;
+  }
+  .first-screen .first-screen_action .base {
+    height: auto;
+    margin: 0 auto;
+    max-width: 500px;
+  }
+  .first-screen .first-screen_action .base .saving {
+    text-wrap: wrap;
+  }
+  .first-screen .first-screen_action .base .time-saving {
+    padding-left: 8px;
+    text-wrap: wrap;
+  }
+  .first-screen .first-screen_title {
+    font-size: 42px;
+    margin-top: 10px;
+  }
+  .first-screen .first-screen_img svg {
+    width: 300px;
+    height: 300px;
+    bottom: 250%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .first-screen .col {
+    padding-top: 40px;
+  }
+  .first-screen .first-screen_img svg {
+    transform: translate(50%, 0px);
+    right: 50%;
+    bottom: -700%;
+  }
+}
 /*# sourceMappingURL=style.css.map */
