@@ -310,7 +310,12 @@ header .nav-account #register:hover {
   bottom: -250px;
 }
 
+.choice {
+  position: relative;
+  padding-bottom: 33px;
+}
 .choice .statistics-company {
+  position: relative;
   padding-bottom: 180px;
 }
 .choice .statistics-company .info-statistics_container {
@@ -331,8 +336,8 @@ header .nav-account #register:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 80px;
-  max-height: 80px;
+  width: 80px;
+  height: 80px;
 }
 .choice .statistics-company .statistic-title {
   color: var(--text-color);
@@ -350,6 +355,11 @@ header .nav-account #register:hover {
 }
 .choice .statistics-company .col-content {
   padding: 2px 24px 0;
+}
+.choice .statistics-company .choice-before1 {
+  position: absolute;
+  bottom: 9px;
+  right: 39px;
 }
 .choice .container-page_choice {
   gap: 108px;
@@ -372,7 +382,7 @@ header .nav-account #register:hover {
   font-size: 16px;
   font-weight: 400;
   line-height: 175%;
-  letter-spacing: 0.16px;
+  letter-spacing: 0.1px;
   max-width: 408px;
   margin-bottom: 32px;
 }
@@ -381,6 +391,16 @@ header .nav-account #register:hover {
   font-weight: 500;
   line-height: 150%;
   padding: 16px 24px;
+}
+.choice .choice-before2 {
+  position: absolute;
+  bottom: 0;
+  right: 40px;
+}
+.choice .choice-before3 {
+  position: absolute;
+  bottom: -91px;
+  left: 0;
 }
 
 footer {
@@ -416,6 +436,33 @@ footer {
     height: 300px;
     bottom: 250%;
   }
+  .choice .statistics-company .info-statistics_container {
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 0;
+  }
+  .choice .statistics-company .info-statistics {
+    max-width: 275px;
+  }
+  .choice .statistics-company .info-statistics .row {
+    justify-content: center;
+  }
+  .choice .choice-container_content {
+    z-index: 2;
+    min-width: 320px;
+  }
+  .choice .container-page_choice {
+    gap: 0;
+    justify-content: center;
+  }
+  .choice .img-container_choice {
+    z-index: 2;
+  }
+  .choice .img-container_choice img {
+    transform: translate(-161px, -40px);
+    width: 400px;
+    height: auto;
+  }
 }
 @media screen and (max-width: 767px) {
   .first-screen .col {
@@ -425,6 +472,17 @@ footer {
     transform: translate(50%, 0px);
     right: 50%;
     bottom: -700%;
+  }
+  .choice .statistics-company {
+    padding-bottom: 40px;
+    padding-top: 100px;
+  }
+  .choice .statistics-company .info-statistics_container {
+    flex-wrap: wrap;
+  }
+  .choice .statistics-company .info-statistics_container .info-statistics {
+    min-width: 200px;
+    text-align: center;
   }
 }
 /*# sourceMappingURL=style.css.map */

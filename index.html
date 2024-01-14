@@ -9,6 +9,7 @@
     <title>CRAPPO</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/aos.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -512,10 +513,10 @@
     </section>
 
     <section class="choice">
-        <div class="container-xxl">
-            <div class="statistics-company">
+        <div class="statistics-company">
+            <div class="container-xxl">
                 <div class="row info-statistics_container">
-                    <div id="1" class="col-4 info-statistics">
+                    <div id="1" class="col-4 info-statistics" data-aos="fade-right">
                         <div class="row">
                             <div class="img-container">
                                 <img src="assets/img/choice-statistics_icon.svg" alt="icon">
@@ -526,7 +527,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="2" class="col-4 info-statistics">
+                    <div id="2" class="col-4 info-statistics" data-aos="zoom-in" data-aos-delay="300">
                         <div class="row">
                             <div class="img-container">
                                 <img src="assets/img/choice-person_icon.svg" alt="icon">
@@ -537,7 +538,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="3" class="col-4 info-statistics">
+                    <div id="3" class="col-4 info-statistics" data-aos="fade-left">
                         <div class="row">
                             <div class="img-container">
                                 <img src="assets/img/choice-earth_icon.svg" alt="icon">
@@ -549,24 +550,36 @@
                         </div>
                     </div>
                 </div>
-            </div>
 
+            </div>
+            <div class="choice-before1">
+                <img src="assets/img/choice_before1.svg" alt="before">
+            </div>
+        </div>
+
+        <div class="container-xxl">
             <div class="row container-page_choice">
                 <div class="img-container_choice">
                     <img src="assets/img/choice-img.svg" alt="choice">
                 </div>
                 <div class="choice-container_content col">
                     <h3 class="choice-title">
-                    Why you should choose CRAPPO
-                </h3>
+                        Why you should choose CRAPPO
+                    </h3>
                     <p class="choice-subtitle">
                         Experience the next generation cryptocurrency platform. No financial borders, extra fees, and fake reviews.
                     </p>
-                    <a class="choice-btn btn btn-default">
-                    Learn More
-                </a>
+                    <a class="choice-btn btn btn-default" href="#">
+                        Learn More
+                    </a>
                 </div>
             </div>
+        </div>
+        <div class="choice-before2">
+            <img src="assets/img/choice_before2.svg" alt="before">
+        </div>
+        <div class="choice-before3">
+            <img src="assets/img/choice_before3.svg" alt="before">
         </div>
     </section>
     <footer>
@@ -575,6 +588,10 @@
 
 
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script>
+    AOS.init();
+    </script>
     <script src="assets/js/custom.js"></script>
 </body>
 
