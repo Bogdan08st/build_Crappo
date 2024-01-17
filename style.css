@@ -6,49 +6,49 @@
 @font-face {
   font-family: Rubik;
   font-weight: 300;
-  src: url("../fonts/Rubik-Light.ttf") format(trueType);
+  src: url("assets/fonts/Rubik-Light.ttf") format(trueType);
   font-display: swap;
   font-style: normal;
 }
 @font-face {
   font-family: Rubik;
   font-weight: 400;
-  src: url("../fonts/Rubik-Regular.ttf") format(trueType);
+  src: url("assets/fonts/Rubik-Regular.ttf") format(trueType);
   font-display: swap;
   font-style: normal;
 }
 @font-face {
   font-family: Rubik;
   font-weight: 500;
-  src: url("../fonts/Rubik-Medium.ttf") format(trueType);
+  src: url("assets/fonts/Rubik-Medium.ttf") format(trueType);
   font-display: swap;
   font-style: normal;
 }
 @font-face {
   font-family: Rubik;
   font-weight: 600;
-  src: url("../fonts/Rubik-SemiBold.ttf") format(trueType);
+  src: url("assets/fonts/Rubik-SemiBold.ttf") format(trueType);
   font-display: swap;
   font-style: normal;
 }
 @font-face {
   font-family: Rubik;
   font-weight: 700;
-  src: url("../fonts/Rubik-Bold.ttf") format(trueType);
+  src: url("assets/fonts/Rubik-Bold.ttf") format(trueType);
   font-display: swap;
   font-style: normal;
 }
 @font-face {
   font-family: Rubik;
   font-weight: 800;
-  src: url("../fonts/Rubik-ExtraBold.ttf") format(trueType);
+  src: url("assets/fonts/Rubik-ExtraBold.ttf") format(trueType);
   font-display: swap;
   font-style: normal;
 }
 @font-face {
   font-family: Rubik;
   font-weight: 900;
-  src: url("../fonts/Rubik-Black.ttf") format(trueType);
+  src: url("assets/fonts/Rubik-Black.ttf") format(trueType);
   font-display: swap;
   font-style: normal;
 }
