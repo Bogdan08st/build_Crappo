@@ -435,7 +435,7 @@ header .nav-account #register:hover {
   background-color: #FBFCFE;
   border-radius: 16px;
   max-width: 942px;
-  height: 371px;
+  max-height: 371px;
   width: 100%;
   box-shadow: 0px 5px 20px 0px #1d0a37;
   position: absolute;
@@ -443,30 +443,43 @@ header .nav-account #register:hover {
   right: auto;
   padding: 48px;
 }
-.earn .calculate .row {
-  gap: 48px;
+.earn .calculate .col-container {
+  display: flex;
+  gap: 97px;
+  flex-direction: column;
 }
-.earn .calculate .input-default {
-  border: 1px solid #E0E0E0;
+.earn .calculate .col-container .row {
+  gap: 48px;
+  padding: 0 12px;
+}
+.earn .calculate .col-container .input-default {
+  border: none;
+  border-bottom: 1px solid #E0E0E0;
   height: 41px;
   border-radius: 0;
 }
-.earn .calculate .input-default:focus {
+.earn .calculate .col-container .input-default:focus {
+  outline: none;
   box-shadow: none;
-  border: 2px solid black;
+  border: none;
+  border-bottom: 2px solid #000;
 }
-.earn .calculate .input-text {
+.earn .calculate .col-container .input-text {
   max-width: 403px;
   margin-top: 10px;
   padding: 0;
 }
-.earn .calculate .input-text::placeholder {
+.earn .calculate .col-container .input-text::placeholder {
   font-size: 20px;
   font-weight: 400;
   line-height: 150%;
   color: #000;
 }
-.earn .calculate .form-select {
+.earn .calculate .col-container .form-select {
+  background-image: url(../assets/img/arrow-down_input.svg);
+  background-size: auto;
+  background-position: right 9px;
+  position: relative;
   max-width: 200px;
   margin-top: 10px;
   padding: 0 7px 3px;
@@ -474,12 +487,39 @@ header .nav-account #register:hover {
   font-weight: 400;
   line-height: 150%;
 }
-.earn .calculate .btn-calculate {
+.earn .calculate .col-container .btn-calculate {
   max-width: 147px;
   padding: 15px 32px;
   font-size: 18px;
   font-weight: 500;
   line-height: 150%;
+}
+.earn .calculate .col-container .hour-revenue {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0.64px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  color: #3671E9;
+}
+.earn .calculate .col-container .revenue {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 1.28px;
+  margin-bottom: 4px;
+  display: inline-block;
+}
+.earn .calculate .col-container .revenue span {
+  color: #3671E9;
+  padding-left: 10px;
+}
+.earn .calculate .col-container .revenue-description {
+  color: #828282;
+  line-height: 175%;
+  letter-spacing: 0.09px;
+  margin: 0;
 }
 
 .cryptocurrencies {
@@ -490,12 +530,128 @@ header .nav-account #register:hover {
   max-width: 966px;
 }
 .cryptocurrencies .title {
+  color: #000;
   font-size: 40px;
   font-weight: 700;
   line-height: 150%;
   max-width: 741px;
   margin: 0 auto;
   text-align: center;
+  margin-bottom: 64px;
+}
+.cryptocurrencies .row {
+  gap: 45px;
+  flex-wrap: nowrap;
+  padding: 0 12px;
+}
+.cryptocurrencies .card {
+  width: 370px;
+  height: 433px;
+  border-radius: 16px;
+  margin-bottom: 100px;
+  transition: all 0.1s;
+}
+.cryptocurrencies .card .card-img {
+  max-width: 80px;
+  margin: 47px auto 48px;
+}
+.cryptocurrencies .card .card-content {
+  /*display: flex;
+  flex-direction: column;
+  justify-content: center;*/
+  color: #000;
+  text-align: center;
+}
+.cryptocurrencies .card .card-tile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 auto 19px;
+  max-width: 160px;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 150%;
+}
+.cryptocurrencies .card .card-tile span {
+  color: #BDBDBD;
+  opacity: 1;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 150%;
+}
+.cryptocurrencies .card .card-subtitle {
+  color: #828282;
+  margin-bottom: 25px;
+  line-height: 175%;
+  letter-spacing: 0.16px;
+}
+.cryptocurrencies .card .card-btn {
+  background-color: #fff;
+  max-height: 64px;
+  max-width: 64px;
+  padding: 0;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  border: 1px solid #D5CDE2;
+  transition: all 0.1s;
+  text-wrap: nowrap;
+}
+.cryptocurrencies .card .card-btn p {
+  margin: 0;
+}
+.cryptocurrencies .card .card-btn svg {
+  height: 64px;
+  width: 64px;
+}
+.cryptocurrencies .card .card-btn:hover svg circle {
+  fill: #3671E9;
+}
+.cryptocurrencies .card .card-btn:hover svg path {
+  fill: #fff;
+}
+.cryptocurrencies .card.active {
+  background-color: #2B076E;
+}
+.cryptocurrencies .card.active .card-content {
+  color: var(--text-color);
+}
+.cryptocurrencies .card.active .card-tile span {
+  color: #fff;
+  opacity: 0.7;
+}
+.cryptocurrencies .card.active .card-subtitle {
+  color: #fff;
+}
+.cryptocurrencies .card.active .card-btn {
+  background-color: #3671E9;
+  border: none;
+  max-width: 204px;
+  transform: translate(2px, 0px);
+  max-height: 65px;
+  width: 100%;
+  padding: 17px 15px 16px 23px;
+  align-items: center;
+  justify-content: space-between;
+}
+.cryptocurrencies .card.active .card-btn p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 150%;
+}
+.cryptocurrencies .card.active .card-btn svg {
+  width: 32px;
+  height: 32px;
+}
+.cryptocurrencies .card.active .card-btn:hover {
+  background-color: #fff;
+}
+.cryptocurrencies .card.active .card-btn:hover svg circle {
+  fill: #3671E9;
+}
+.cryptocurrencies .card.active .card-btn:hover svg path {
+  fill: #fff;
 }
 
 footer {

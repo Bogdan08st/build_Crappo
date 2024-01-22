@@ -52,7 +52,7 @@
                     </div>
                     <a class="btn-default btn first-screen_button animate__animated animate__fadeIn" href="#">
                     Try for FREE
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg viewBox="0 0 24 24" fill="none">
                         <g id="eva:chevron-right-outline">
                             <path id="Vector" d="M10.4999 17.0002C10.3683 17.0009 10.2379 16.9757 10.116 16.9259C9.9942 16.8762 9.88338 16.8029 9.78994 16.7102C9.69621 16.6172 9.62182 16.5066 9.57105 16.3848C9.52028 16.2629 9.49414 16.1322 9.49414 16.0002C9.49414 15.8682 9.52028 15.7375 9.57105 15.6156C9.62182 15.4937 9.69621 15.3831 9.78994 15.2902L13.0999 12.0002L9.91994 8.69017C9.73369 8.50281 9.62915 8.24936 9.62915 7.98517C9.62915 7.72099 9.73369 7.46754 9.91994 7.28017C10.0129 7.18644 10.1235 7.11205 10.2454 7.06128C10.3672 7.01051 10.4979 6.98438 10.6299 6.98438C10.762 6.98438 10.8927 7.01051 11.0145 7.06128C11.1364 7.11205 11.247 7.18644 11.3399 7.28017L15.1999 11.2802C15.3832 11.4671 15.4858 11.7184 15.4858 11.9802C15.4858 12.2419 15.3832 12.4932 15.1999 12.6802L11.1999 16.6802C11.1102 16.7771 11.0021 16.8553 10.882 16.9102C10.7618 16.9651 10.632 16.9957 10.4999 17.0002Z" fill="#3671E9"/>
                         </g>
@@ -595,7 +595,7 @@
                 </div>
 
                 <div class="calculate">
-                    <div class="container">
+                    <div class="col-container col">
                         <div class="row">
                             <input class="input-default input-text" type="text" placeholder="Enter your hash rate">
                             <select class="form-select input-default" aria-label="Multiple select example">
@@ -616,6 +616,11 @@
                             </select>
                             <a class="btn btn-calculate btn-default">Calculate</a>
                         </div>
+                        <div class="col">
+                            <p class="hour-revenue">ESTIMATED 24 HOUR REVENUE:</p>
+                            <b class="revenue">0.055 130 59 ETH<span>($1275)</span></b>
+                            <p class="revenue-description">Revenue will change based on mining difficulty and Ethereum price.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -627,6 +632,68 @@
                 <h3 class="title">
                 Trade securely and market the high growth cryptocurrencies.
             </h3>
+            </div>
+            <div class="row">
+                <div class="col-4 card active">
+                    <div class="card-img">
+                        <img src="assets/img/icon-bitcoin.svg" alt="Bitcoin">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-tile">
+                            Bitcoin<span>BTC</span>
+                        </div>
+                        <div class="card-subtitle">
+                            Digital currency in which a record of transactions is maintained.
+                        </div>
+                        <a class="btn btn-default card-btn">
+                        <p>Start mining</p>
+                        <svg id="svgbtn" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <circle cx="16" cy="16" r="16" fill="white"/>
+                            <path d="M14.4999 21.0001C14.3683 21.0008 14.2379 20.9756 14.116 20.9258C13.9942 20.8761 13.8834 20.8027 13.7899 20.7101C13.6962 20.6171 13.6218 20.5065 13.571 20.3846C13.5203 20.2628 13.4941 20.1321 13.4941 20.0001C13.4941 19.868 13.5203 19.7373 13.571 19.6155C13.6218 19.4936 13.6962 19.383 13.7899 19.2901L17.0999 16.0001L13.9199 12.6901C13.7337 12.5027 13.6291 12.2492 13.6291 11.9851C13.6291 11.7209 13.7337 11.4674 13.9199 11.2801C14.0129 11.1863 14.1235 11.1119 14.2454 11.0612C14.3672 11.0104 14.4979 10.9843 14.6299 10.9843C14.762 10.9843 14.8927 11.0104 15.0145 11.0612C15.1364 11.1119 15.247 11.1863 15.3399 11.2801L19.1999 15.2801C19.3832 15.467 19.4858 15.7183 19.4858 15.9801C19.4858 16.2418 19.3832 16.4931 19.1999 16.6801L15.1999 20.6801C15.1102 20.777 15.0021 20.8552 14.882 20.9101C14.7618 20.965 14.632 20.9956 14.4999 21.0001Z" fill="#3671E9"/>
+                        </svg>
+                    </a>
+                    </div>
+                </div>
+                <div class="col-4 card">
+                    <div class="card-img">
+                        <img src="assets/img/ethereum.svg" alt="Ethereum">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-tile">
+                            Ethereum<span>ETH</span>
+                        </div>
+                        <div class="card-subtitle">
+                            Blockchain technology to create and run decentralized digital applications.
+                        </div>
+                        <a class="btn btn-default card-btn">
+                        <p></p>
+                        <svg id="svgbtn" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <circle cx="16" cy="16" r="16" fill="white"/>
+                            <path d="M14.4999 21.0001C14.3683 21.0008 14.2379 20.9756 14.116 20.9258C13.9942 20.8761 13.8834 20.8027 13.7899 20.7101C13.6962 20.6171 13.6218 20.5065 13.571 20.3846C13.5203 20.2628 13.4941 20.1321 13.4941 20.0001C13.4941 19.868 13.5203 19.7373 13.571 19.6155C13.6218 19.4936 13.6962 19.383 13.7899 19.2901L17.0999 16.0001L13.9199 12.6901C13.7337 12.5027 13.6291 12.2492 13.6291 11.9851C13.6291 11.7209 13.7337 11.4674 13.9199 11.2801C14.0129 11.1863 14.1235 11.1119 14.2454 11.0612C14.3672 11.0104 14.4979 10.9843 14.6299 10.9843C14.762 10.9843 14.8927 11.0104 15.0145 11.0612C15.1364 11.1119 15.247 11.1863 15.3399 11.2801L19.1999 15.2801C19.3832 15.467 19.4858 15.7183 19.4858 15.9801C19.4858 16.2418 19.3832 16.4931 19.1999 16.6801L15.1999 20.6801C15.1102 20.777 15.0021 20.8552 14.882 20.9101C14.7618 20.965 14.632 20.9956 14.4999 21.0001Z" fill="#3671E9"/>
+                        </svg>
+                    </a>
+                    </div>
+                </div>
+                <div class="col-4 card">
+                    <div class="card-img">
+                        <img src="assets/img/litecoin.svg" alt="Litecoin">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-tile">
+                            Bitcoin <span>BTC</span>
+                        </div>
+                        <div class="card-subtitle">
+                            Cryptocurrency that enables instant payments to anyone in the world.
+                        </div>
+                        <a class="btn btn-default card-btn">
+                        <p></p>
+                        <svg id="svgbtn" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <circle cx="16" cy="16" r="16" fill="white"/>
+                            <path d="M14.4999 21.0001C14.3683 21.0008 14.2379 20.9756 14.116 20.9258C13.9942 20.8761 13.8834 20.8027 13.7899 20.7101C13.6962 20.6171 13.6218 20.5065 13.571 20.3846C13.5203 20.2628 13.4941 20.1321 13.4941 20.0001C13.4941 19.868 13.5203 19.7373 13.571 19.6155C13.6218 19.4936 13.6962 19.383 13.7899 19.2901L17.0999 16.0001L13.9199 12.6901C13.7337 12.5027 13.6291 12.2492 13.6291 11.9851C13.6291 11.7209 13.7337 11.4674 13.9199 11.2801C14.0129 11.1863 14.1235 11.1119 14.2454 11.0612C14.3672 11.0104 14.4979 10.9843 14.6299 10.9843C14.762 10.9843 14.8927 11.0104 15.0145 11.0612C15.1364 11.1119 15.247 11.1863 15.3399 11.2801L19.1999 15.2801C19.3832 15.467 19.4858 15.7183 19.4858 15.9801C19.4858 16.2418 19.3832 16.4931 19.1999 16.6801L15.1999 20.6801C15.1102 20.777 15.0021 20.8552 14.882 20.9101C14.7618 20.965 14.632 20.9956 14.4999 21.0001Z" fill="#3671E9"/>
+                        </svg>
+                    </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
