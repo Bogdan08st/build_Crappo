@@ -65,3 +65,38 @@ const InstallStatisticCompany = () => {
 }
 
 document.querySelector('.statistics-company') ? InstallStatisticCompany() : null;
+
+
+const InstallCardClassLogic = ()=>{
+    const cryptocurrencies = document.querySelector('.cryptocurrencies')
+    const cards = cryptocurrencies.querySelectorAll('.card')
+
+
+    const removeClass = (selector, className) => selector.forEach(item => item.classList.remove(className));
+    const addClass = (selector, className) => selector.classList.add(className);
+    cards.forEach((item) => {
+        // const cardbtnText = cardBtn.textContent;
+        // console.log(cardbtnText)
+        item.addEventListener('click', (event) => {
+            const thisCard = event.currentTarget;
+
+            if (item.contains(thisCard) || item === thisCard) {
+                // Если да, это элемент карты
+                console.log(item);
+                removeClass(cards, 'active');
+                addClass(item, 'active');
+            }
+
+            cards.forEach((card) => {
+                const cardBtn = card.querySelector('.card-btn p');
+                if (card.classList.contains('active')) {
+                    cardBtn.textContent = 'Start mining';
+                } else {
+                    cardBtn.textContent = null;
+                }
+            });
+        });
+    });
+}
+
+document.querySelector('.cryptocurrencies') ? InstallCardClassLogic() : null;
