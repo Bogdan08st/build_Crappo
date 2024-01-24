@@ -22,6 +22,39 @@ const SiteStatistics = [{
     },
 ];
 
+$(document).ready(function(){
+    var slider = $('.cryptocurrencies .row')
+    var settings = {
+        dots: true,
+        mobileFirst: true,
+        variableWidth: true,
+        arrows: false,
+        centerPadding: '45px',
+        infinite: true,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        responsive: [
+            {
+            breakpoint: 1200,
+            settings: "unslick",
+            },
+            {
+            breakpoint: 767,
+            settings: {
+                slidesToShow: 1,
+                dots: true,
+            }
+            }
+        ]
+    }
+    slider.slick(settings);
+})
+
+
+
+
+
+
 const InstallEventAction = function() {
     const pageAction = document.querySelector('.page-action')
     const RenderAction = (info) => {
@@ -82,17 +115,22 @@ const InstallCardClassLogic = ()=>{
 
             if (item.contains(thisCard) || item === thisCard) {
                 // Если да, это элемент карты
-                console.log(item);
+                //console.log(item);
                 removeClass(cards, 'active');
                 addClass(item, 'active');
             }
 
             cards.forEach((card) => {
                 const cardBtn = card.querySelector('.card-btn p');
+                const HrefdBtn = card.querySelector('.card-btn')
                 if (card.classList.contains('active')) {
                     cardBtn.textContent = 'Start mining';
+                    setTimeout(function(){
+                        HrefdBtn.setAttribute('href', "#")
+                    }, 1000);
                 } else {
                     cardBtn.textContent = null;
+                    HrefdBtn.removeAttribute('href', "#")
                 }
             });
         });

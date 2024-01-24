@@ -3,12 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="theme-color" content="#89C249">
+    <meta name="theme-color" content="#3671E9">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="shortcut icon" href="assets/img/favicon.svg">
     <title>CRAPPO</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/aos.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -594,32 +595,34 @@
                     </div>
                 </div>
 
-                <div class="calculate">
-                    <div class="col-container col">
-                        <div class="row">
-                            <input class="input-default input-text" type="text" placeholder="Enter your hash rate">
-                            <select class="form-select input-default" aria-label="Multiple select example">
-                                <option selected="">TH/s</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                                <option value="4">Three</option>
-                                <option value="5">Three</option>
-                                <option value="6">Three</option>
-                                <option value="7">Three</option>
-                                <option value="8">Three</option>
-                                <option value="9">Three</option>
-                                <option value="10">Three</option>
-                                <option value="11">Three</option>
-                                <option value="12">Three</option>
-                                <option value="13">Three</option>
-                            </select>
-                            <a class="btn btn-calculate btn-default">Calculate</a>
-                        </div>
-                        <div class="col">
-                            <p class="hour-revenue">ESTIMATED 24 HOUR REVENUE:</p>
-                            <b class="revenue">0.055 130 59 ETH<span>($1275)</span></b>
-                            <p class="revenue-description">Revenue will change based on mining difficulty and Ethereum price.</p>
+                <div class="calculate-container">
+                    <div class="calculate">
+                        <div class="col-container col">
+                            <div class="row">
+                                <input class="input-default input-text" type="text" placeholder="Enter your hash rate">
+                                <select class="form-select input-default" aria-label="Multiple select example">
+                                    <option selected="">TH/s</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                    <option value="4">Three</option>
+                                    <option value="5">Three</option>
+                                    <option value="6">Three</option>
+                                    <option value="7">Three</option>
+                                    <option value="8">Three</option>
+                                    <option value="9">Three</option>
+                                    <option value="10">Three</option>
+                                    <option value="11">Three</option>
+                                    <option value="12">Three</option>
+                                    <option value="13">Three</option>
+                                </select>
+                                <a class="btn btn-calculate btn-default">Calculate</a>
+                            </div>
+                            <div class="col">
+                                <p class="hour-revenue">ESTIMATED 24 HOUR REVENUE:</p>
+                                <b class="revenue">0.055 130 59 ETH<span>($1275)</span></b>
+                                <p class="revenue-description">Revenue will change based on mining difficulty and Ethereum price.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -680,7 +683,7 @@
                     </div>
                     <div class="card-content">
                         <div class="card-tile">
-                            Bitcoin <span>BTC</span>
+                            Litecoin <span>LTC</span>
                         </div>
                         <div class="card-subtitle">
                             Cryptocurrency that enables instant payments to anyone in the world.
@@ -703,6 +706,8 @@
 
 
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
     <script src="assets/js/aos.js"></script>
     <script>
     AOS.init();

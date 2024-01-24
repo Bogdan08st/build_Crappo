@@ -88,6 +88,35 @@ a {
   color: black;
 }
 
+ul.slick-dots {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+ul.slick-dots li {
+  display: inline-block;
+  font-size: 0;
+}
+ul.slick-dots li:before {
+  display: none;
+}
+ul.slick-dots li.slick-active button {
+  background-color: #3671E9;
+}
+ul.slick-dots button {
+  font-size: 0;
+  padding: 0px;
+  border-radius: 50%;
+  opacity: 0.9;
+  border: 2px solid #3671E9;
+  width: 12px;
+  height: 12px;
+  background: transparent;
+  outline: none;
+}
+
 header {
   background-color: var(--text-color-dark);
   padding-top: 60px;
@@ -431,16 +460,19 @@ header .nav-account #register:hover {
   font-weight: 400;
   line-height: 150%;
 }
-.earn .calculate {
-  background-color: #FBFCFE;
-  border-radius: 16px;
+.earn .calculate-container {
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  right: auto;
   max-width: 942px;
   max-height: 371px;
   width: 100%;
+}
+.earn .calculate {
+  background-color: #FBFCFE;
+  border-radius: 16px;
   box-shadow: 0px 5px 20px 0px #1d0a37;
-  position: absolute;
-  left: auto;
-  right: auto;
   padding: 48px;
 }
 .earn .calculate .col-container {
@@ -449,6 +481,7 @@ header .nav-account #register:hover {
   flex-direction: column;
 }
 .earn .calculate .col-container .row {
+  justify-content: center;
   gap: 48px;
   padding: 0 12px;
 }
@@ -714,6 +747,23 @@ footer {
     width: 400px;
     height: auto;
   }
+  .earn .calculate-container {
+    padding: 0 24px;
+  }
+  .earn .calculate .col-container {
+    gap: 20px;
+  }
+  .cryptocurrencies {
+    padding-bottom: 70px;
+  }
+  .cryptocurrencies .row .slick-list {
+    width: 785px;
+    margin: 0 auto;
+  }
+  .cryptocurrencies .card {
+    margin-right: 45px;
+    margin-bottom: 30px;
+  }
 }
 @media screen and (max-width: 767px) {
   .first-screen .col {
@@ -734,6 +784,12 @@ footer {
   .choice .statistics-company .info-statistics_container .info-statistics {
     min-width: 200px;
     text-align: center;
+  }
+  .cryptocurrencies {
+    padding-top: 430px;
+  }
+  .cryptocurrencies .row .slick-list {
+    width: 370px;
   }
 }
 /*# sourceMappingURL=style.css.map */
