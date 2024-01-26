@@ -81,6 +81,10 @@ a {
   background: #3671E9;
   color: var(--text-color);
   cursor: pointer;
+  font-size: 18px;
+  padding: 15px 32px;
+  font-weight: 500;
+  line-height: 150%;
 }
 
 .btn-default:hover {
@@ -115,6 +119,29 @@ ul.slick-dots button {
   height: 12px;
   background: transparent;
   outline: none;
+}
+
+.page-title {
+  color: var(--text-color);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 150%;
+}
+
+.title {
+  color: var(--text-color);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 150%;
+}
+
+.subtitle {
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 175%;
+  letter-spacing: 0.16px;
+  margin-bottom: 32px;
 }
 
 header {
@@ -401,10 +428,7 @@ header .nav-account #register:hover {
   color: var(--text-color);
   max-width: 50%;
 }
-.choice .choice-container_content .choice-title {
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 150%;
+.choice .choice-container_content .page-title {
   margin-bottom: 22px;
 }
 .choice .choice-container_content .choice-subtitle {
@@ -446,10 +470,7 @@ header .nav-account #register:hover {
   color: var(--text-color);
   padding-bottom: 63px;
 }
-.earn .container-earn .title {
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 150%;
+.earn .container-earn .page-title {
   margin-bottom: 24px;
 }
 .earn .container-earn .subtitle {
@@ -562,24 +583,25 @@ header .nav-account #register:hover {
 .cryptocurrencies .container {
   max-width: 966px;
 }
-.cryptocurrencies .title {
+.cryptocurrencies .page-title {
   color: #000;
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 150%;
   max-width: 741px;
   margin: 0 auto;
   text-align: center;
   margin-bottom: 64px;
 }
 .cryptocurrencies .row {
-  gap: 45px;
   flex-wrap: nowrap;
   padding: 0 12px;
+}
+.cryptocurrencies .row .slick-list {
+  width: 1200px;
+  margin: 0 auto;
 }
 .cryptocurrencies .card {
   width: 370px;
   height: 433px;
+  margin-right: 45px;
   border-radius: 16px;
   margin-bottom: 100px;
   transition: all 0.1s;
@@ -650,6 +672,29 @@ header .nav-account #register:hover {
 .cryptocurrencies .card.active .card-content {
   color: var(--text-color);
 }
+.cryptocurrencies .card.active .card-img {
+  animation-name: img-card_active;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes img-card_active {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(0, 5px);
+  }
+  50% {
+    transform: translate(0, 0);
+  }
+  75% {
+    transform: translate(0, -5px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
 .cryptocurrencies .card.active .card-tile span {
   color: #fff;
   opacity: 0.7;
@@ -685,6 +730,61 @@ header .nav-account #register:hover {
 }
 .cryptocurrencies .card.active .card-btn:hover svg path {
   fill: #fff;
+}
+
+.features {
+  background-color: #2B076E;
+  padding: 100px 0;
+}
+.features .card-ill {
+  border-radius: 16px;
+  background-color: #491F98;
+  backdrop-filter: blur(125px);
+}
+.features .page-title {
+  text-align: center;
+  max-width: 758px;
+  margin: 0 auto 100px;
+}
+.features .title {
+  margin-bottom: 24px;
+}
+.features .subtitle {
+  margin-bottom: 32px;
+}
+.features .invest {
+  padding-bottom: 249px;
+}
+.features .invest .text-content {
+  padding-top: 40px;
+  max-width: 454px;
+}
+.features .invest .row {
+  gap: 100px;
+}
+.features .invest .chart {
+  max-width: 580px;
+  position: relative;
+}
+.features .invest .chart .subimg_content {
+  gap: 113px;
+  position: absolute;
+  bottom: -40%;
+  transform: translate(65px, 9px);
+  max-width: 580px;
+  width: 100%;
+  padding: 0 12px;
+}
+.features .invest .chart .subimg_content .card-bounce {
+  max-width: 178px;
+  width: 100%;
+  height: 184px;
+}
+.features .invest .chart .subimg_content .card-visits {
+  max-width: 169px;
+  width: 100%;
+  height: 84px;
+  margin-top: 12px;
 }
 
 footer {
@@ -790,6 +890,14 @@ footer {
   }
   .cryptocurrencies .row .slick-list {
     width: 370px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .cryptocurrencies {
+    padding-top: 500px;
+  }
+  .cryptocurrencies .row {
+    padding: 0 9px;
   }
 }
 /*# sourceMappingURL=style.css.map */
