@@ -52,6 +52,41 @@
   font-display: swap;
   font-style: normal;
 }
+@font-face {
+  font-family: Inter;
+  font-weight: 300;
+  src: url("assets/fonts/Inter-Light.ttf") format(trueType);
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: Inter;
+  font-weight: 400;
+  src: url("assets/fonts/Inter-Regular.ttf") format(trueType);
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: Inter;
+  font-weight: 500;
+  src: url("assets/fonts/Inter-Medium.ttf") format(trueType);
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: Inter;
+  font-weight: 600;
+  src: url("assets/fonts/Inter-SemiBold.ttf") format(trueType);
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: Inter;
+  font-weight: 700;
+  src: url("assets/fonts/Rubik-Bold.ttf") format(trueType);
+  font-display: swap;
+  font-style: normal;
+}
 * {
   padding: 0;
   margin: 0;
@@ -761,10 +796,62 @@ header .nav-account #register:hover {
 }
 .features .invest .row {
   gap: 100px;
+  flex-wrap: nowrap;
 }
 .features .invest .chart {
-  max-width: 580px;
+  max-width: 605px;
   position: relative;
+  font-family: Inter, sans-serif;
+}
+.features .invest .chart .container-chart {
+  width: 100%;
+  height: 298px;
+  background-color: #35068C;
+  border-radius: 16px;
+  padding: 40px 40px 48px;
+}
+.features .invest .chart .container-chart .chart-info {
+  padding: 0 12px;
+  justify-content: space-between;
+}
+.features .invest .chart .container-chart .chart-info .img-crypto {
+  max-width: 179px;
+  height: 50px;
+  padding: 0;
+}
+.features .invest .chart .container-chart .chart-info p {
+  max-width: 46px;
+  padding: 0;
+  color: #42FFFF;
+  margin: 0;
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.14px;
+}
+.features .invest .chart .container-chart .chart-list {
+  overflow-x: hidden;
+  margin-top: 22px;
+  position: relative;
+  height: 100%;
+}
+.features .invest .chart .container-chart .chart-list svg {
+  position: absolute;
+  left: 0;
+  transition: 1s;
+  animation-name: svg-chart;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes svg-chart {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -785px;
+  }
 }
 .features .invest .chart .subimg_content {
   gap: 113px;
@@ -779,12 +866,56 @@ header .nav-account #register:hover {
   max-width: 178px;
   width: 100%;
   height: 184px;
+  padding: 24px 16px;
+}
+.features .invest .chart .subimg_content .card-bounce .col {
+  color: var(--text-color);
+  gap: 16px;
+  display: inline-flex;
+  flex-direction: column;
+}
+.features .invest .chart .subimg_content .card-bounce h3 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 140%;
+  margin: 0;
+}
+.features .invest .chart .subimg_content .card-bounce .row {
+  gap: 6px;
+  padding: 0 12px;
+  align-items: center;
+}
+.features .invest .chart .subimg_content .card-bounce .row svg {
+  max-width: 24px;
+  padding: 0;
+}
+.features .invest .chart .subimg_content .card-bounce span {
+  max-width: 67px;
+  padding: 0;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1px;
+}
+.features .invest .chart .subimg_content .card-bounce p {
+  margin: 0;
+  font-size: 16px;
+  line-height: normal;
 }
 .features .invest .chart .subimg_content .card-visits {
   max-width: 169px;
   width: 100%;
   height: 84px;
   margin-top: 12px;
+  padding: 16px 32px;
+  color: var(--text-color);
+  text-align: center;
+}
+.features .invest .chart .subimg_content .card-visits span {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.24px;
 }
 
 footer {
