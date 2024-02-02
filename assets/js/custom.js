@@ -25,8 +25,7 @@ const SiteStatistics = [{
 $(document).ready(function(){
     var slider = $('.cryptocurrencies .row')
     var settings = {
-        dots: true,
-        mobileFirst: true,
+        mobileFirst: false,
         variableWidth: true,
         arrows: false,
         centerPadding: '45px',
@@ -37,6 +36,13 @@ $(document).ready(function(){
             {
             breakpoint: 1200,
             settings: "unslick",
+            },
+            {
+                breakpoint: 991,
+                settings: {
+                    dots: true,
+                    mobileFirst: true,
+                }
             },
             {
             breakpoint: 767,
@@ -138,3 +144,31 @@ const InstallCardClassLogic = ()=>{
 }
 
 document.querySelector('.cryptocurrencies') ? InstallCardClassLogic() : null;
+
+
+const InstallCalculate = function(){
+    const calculate = document.querySelectorAll('.calculate')
+    calculate.forEach((item)=>{
+        const userRate = item.querySelector('#user-rate');
+        const userChoice = item.querySelector('#user-choice-calcul');
+        const finalRevenue = item.querySelector('#calcul-ravenue');
+        const btnCalcul = item.querySelector('.btn')
+
+        $('select').niceSelect();
+
+        btnCalcul.addEventListener('click', ()=>{
+            const choiceSelected = userChoice.querySelector('.list .selected')
+            const choiceValue = choiceSelected.getValue;
+            console.log(choiceValue);
+            
+            const calcul = () =>{
+                console.log('kaka')
+                
+            }
+            calcul();
+        })
+
+
+    })
+};
+document.querySelector('.calculate') ? InstallCalculate() : null;

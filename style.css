@@ -571,10 +571,33 @@ header .nav-account #register:hover {
   position: relative;
   max-width: 200px;
   margin-top: 10px;
-  padding: 0 7px 3px;
+  padding: 0;
   font-size: 20px;
   font-weight: 400;
   line-height: 150%;
+  cursor: pointer;
+}
+.earn .calculate .col-container .form-select span {
+  padding-left: 7px;
+}
+.earn .calculate .col-container .form-select .list {
+  list-style: none;
+  padding: 0;
+  display: none;
+  margin-top: 11px;
+  background-color: #e4e4e4;
+  border-radius: 10px;
+}
+.earn .calculate .col-container .form-select .list li {
+  cursor: pointer;
+}
+.earn .calculate .col-container .form-select .list li:hover {
+  border: 2px solid black;
+}
+.earn .calculate .col-container .open .list {
+  display: block;
+  list-style: none;
+  padding: 0;
 }
 .earn .calculate .col-container .btn-calculate {
   max-width: 147px;
@@ -796,7 +819,6 @@ header .nav-account #register:hover {
 }
 .features .invest .row {
   gap: 100px;
-  flex-wrap: nowrap;
 }
 .features .invest .chart {
   max-width: 605px;
@@ -854,7 +876,8 @@ header .nav-account #register:hover {
   }
 }
 .features .invest .chart .subimg_content {
-  gap: 113px;
+  justify-content: start;
+  gap: 20%;
   position: absolute;
   bottom: -40%;
   transform: translate(65px, 9px);
@@ -917,11 +940,60 @@ header .nav-account #register:hover {
   line-height: normal;
   letter-spacing: 0.24px;
 }
+.features .detailed-statistics {
+  padding-bottom: 120px;
+}
+.features .detailed-statistics .img-container {
+  max-width: 682px;
+  height: 453px;
+  position: relative;
+}
+.features .detailed-statistics .img-container img {
+  position: absolute;
+  top: 0;
+  left: -107px;
+}
+.features .detailed-statistics .text-content {
+  max-width: 456px;
+  padding-top: 105px;
+  padding-right: 25px;
+}
+.features .detailed-statistics .text-content .btn {
+  transform: translateX(-2px);
+}
 
 footer {
   padding: 200px 0;
 }
 
+@media screen and (max-width: 1200px) {
+  .features .title {
+    margin-bottom: 20px;
+  }
+  .features .subtitle {
+    margin-bottom: 30px;
+  }
+  .features .invest .row {
+    gap: 50px;
+    justify-content: center;
+  }
+  .features .invest .row .text-content {
+    text-align: center;
+  }
+  .features .invest .chart .subimg_content {
+    justify-content: start;
+  }
+  .features .detailed-statistics .row {
+    justify-content: center;
+  }
+  .features .detailed-statistics .text-content {
+    text-align: center;
+  }
+  .features .detailed-statistics .img-container img {
+    width: 100%;
+    height: 100%;
+  }
+}
 @media screen and (max-width: 991px) {
   header .nav-list {
     margin: 0 auto;
@@ -995,6 +1067,13 @@ footer {
     margin-right: 45px;
     margin-bottom: 30px;
   }
+  .features .detailed-statistics .img-container img {
+    left: 0;
+    padding: 0 12px;
+  }
+  .features .detailed-statistics .text-content {
+    padding-top: 30px;
+  }
 }
 @media screen and (max-width: 767px) {
   .first-screen .col {
@@ -1029,6 +1108,12 @@ footer {
   }
   .cryptocurrencies .row {
     padding: 0 9px;
+  }
+  .features .invest .chart .subimg_content {
+    flex-wrap: nowrap;
+    gap: 20px;
+    transform: translate(0px, 9px);
+    justify-content: space-between;
   }
 }
 /*# sourceMappingURL=style.css.map */
