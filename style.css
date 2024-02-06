@@ -585,14 +585,11 @@ header .nav-account #register:hover {
   padding: 0;
   display: none;
   margin-top: 11px;
-  background-color: #e4e4e4;
+  background-color: #f9f9f9;
   border-radius: 10px;
 }
 .earn .calculate .col-container .form-select .list li {
   cursor: pointer;
-}
-.earn .calculate .col-container .form-select .list li:hover {
-  border: 2px solid black;
 }
 .earn .calculate .col-container .open .list {
   display: block;

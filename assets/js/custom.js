@@ -150,20 +150,53 @@ const InstallCalculate = function(){
     const calculate = document.querySelectorAll('.calculate')
     calculate.forEach((item)=>{
         const userRate = item.querySelector('#user-rate');
-        const userChoice = item.querySelector('#user-choice-calcul');
         const finalRevenue = item.querySelector('#calcul-ravenue');
         const btnCalcul = item.querySelector('.btn')
 
         $('select').niceSelect();
 
         btnCalcul.addEventListener('click', ()=>{
-            const choiceSelected = userChoice.querySelector('.list .selected')
-            const choiceValue = choiceSelected.getValue;
-            console.log(choiceValue);
+            const choiceSelected = item.querySelector('.list .selected');
+            const choiceValue = choiceSelected.getAttribute('data-value');
+
+            const userRateValue = userRate.value;
+            //console.log(userRateValue);
             
             const calcul = () =>{
-                console.log('kaka')
-                
+                let result;
+
+                switch(choiceValue) {
+                    case 'TH/s':
+                        result = userRateValue * 1e12; // 1 TH/s = 1,000,000,000,000 H/s
+                        break;
+                    case 'GH/s':
+                        result = userRateValue * 1e9;  // 1 GH/s = 1,000,000,000 H/s
+                        break;
+                    case 'MH/s':
+                        result = userRateValue * 1e6;  // 1 MH/s = 1,000,000 H/s
+                        break;
+                    case 'kH/s':
+                        result = userRateValue * 1e3;  // 1 kH/s = 1,000 H/s
+                        break;
+                    default:
+                        result = 0;
+                }
+
+                let resultDollars = result
+
+                // Получаем курс ETH к USD с CoinGecko
+                const ethToUsdRate = 2368.71;
+
+                const resultInUSD = ethToUsdRate * result;
+                const resultfixed = `(${resultInUSD.toFixed(2)}$)`;
+
+
+            //console.log(result)
+            const spanElement = document.createElement('span');
+            finalRevenue.textContent = resultDollars + "" + "ETH";
+            spanElement.textContent = resultfixed;
+            finalRevenue.appendChild(spanElement);
+
             }
             calcul();
         })
