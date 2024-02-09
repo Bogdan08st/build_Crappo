@@ -188,7 +188,7 @@ const InstallCalculate = function(){
                 const ethToUsdRate = 2368.71;
 
                 const resultInUSD = ethToUsdRate * result;
-                const resultfixed = `(${resultInUSD.toFixed(2)}$)`;
+                const resultfixed = `($${resultInUSD.toFixed(2)})`;
 
 
             //console.log(result)
