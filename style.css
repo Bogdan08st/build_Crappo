@@ -565,7 +565,7 @@ header .nav-account #register:hover {
   color: #000;
 }
 .earn .calculate .col-container .form-select {
-  background-image: url(../assets/img/arrow-down_input.svg);
+  background-image: url(assets/img/arrow-down_input.svg);
   background-size: auto;
   background-position: right 9px;
   position: relative;
@@ -790,6 +790,7 @@ header .nav-account #register:hover {
 .features {
   background-color: #2B076E;
   padding: 100px 0;
+  position: relative;
 }
 .features .card-ill {
   border-radius: 16px;
@@ -957,6 +958,66 @@ header .nav-account #register:hover {
 }
 .features .detailed-statistics .text-content .btn {
   transform: translateX(-2px);
+}
+.features .grow-profit .row {
+  justify-content: space-between;
+}
+.features .grow-profit .text-content {
+  padding-top: 10px;
+  max-width: 442px;
+}
+.features .grow-profit .img-container {
+  max-width: 634px;
+  font-family: Inter;
+}
+.features .grow-profit .img-container .base {
+  z-index: 1;
+  position: relative;
+  background-color: #35068c;
+  border-radius: 16px;
+  width: 100%;
+  height: 334px;
+  padding: 40px 35px 40px 40px;
+  transition: all 1s;
+}
+.features .grow-profit .img-container .base .row span {
+  width: auto;
+}
+.features .grow-profit .img-container .base .row-end {
+  display: flex;
+  justify-content: end;
+}
+.features .grow-profit .img-container .base .title {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17px;
+  width: 100%;
+  max-width: 354px;
+  margin: 0;
+}
+.features .grow-profit .img-container .base .row-description {
+  padding-top: 15px;
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+}
+.features .grow-profit .img-container .base .row-description .element.active {
+  padding: 16px 52px 16px 40px;
+  border-radius: 16px;
+  background-color: #4610ad;
+  width: 610px;
+  transform: translate(-112px, 0px);
+}
+.features .features-before1 {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  transform: translateX(40px);
+}
+.features .features-before2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 footer {
