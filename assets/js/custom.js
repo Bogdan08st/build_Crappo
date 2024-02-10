@@ -205,3 +205,22 @@ const InstallCalculate = function(){
     })
 };
 document.querySelector('.calculate') ? InstallCalculate() : null;
+
+
+const FeaturesRandomElement = ()=>{
+    const elements = document.querySelectorAll('.row-description .element')
+    
+    setInterval(()=>{
+        elements.forEach(element =>{
+            element.classList.remove('active');
+        });
+
+        //add random nomber by element
+        const randomNomber = Math.floor(Math.random() * elements.length);
+
+        //add active class to element
+        elements[randomNomber].classList.add('active');
+
+    }, 2000);
+}
+document.querySelector('.features') ? FeaturesRandomElement() : null;
