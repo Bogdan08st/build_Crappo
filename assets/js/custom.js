@@ -185,7 +185,7 @@ const InstallCalculate = function(){
                 let resultDollars = result
 
                 // Получаем курс ETH к USD с CoinGecko
-                const ethToUsdRate = 2368.71;
+                const ethToUsdRate = 156.83;
 
                 const resultInUSD = ethToUsdRate * result;
                 const resultfixed = `($${resultInUSD.toFixed(2)})`;

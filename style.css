@@ -179,6 +179,13 @@ ul.slick-dots button {
   margin-bottom: 32px;
 }
 
+.input-default {
+  border: none;
+  border-bottom: 1px solid #E0E0E0;
+  height: 41px;
+  border-radius: 0;
+}
+
 header {
   background-color: var(--text-color-dark);
   padding-top: 60px;
@@ -1023,6 +1030,64 @@ header .nav-account #register:hover {
   right: 0;
 }
 
+.start-mining {
+  padding: 88px 0;
+  background: linear-gradient(180deg, rgb(43, 7, 110), rgb(13, 13, 43) 100%);
+}
+.start-mining .base {
+  width: 100%;
+  max-width: 100%;
+  padding: 48px;
+  background-color: #3671e9;
+  background-image: url(assets/img/start-mining-now.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 16px;
+}
+.start-mining .base .row {
+  justify-content: space-between;
+}
+.start-mining .base .text-content {
+  max-width: 501px;
+}
+.start-mining .base .text-content .title {
+  margin-bottom: 16px;
+}
+.start-mining .base .text-content .subtitle {
+  max-width: 348px;
+  margin: 0;
+}
+.start-mining .base .email {
+  max-width: 590px;
+  margin: 28px 0 32px;
+}
+.start-mining .base .email .row-input {
+  padding: 0 12px;
+  justify-content: space-between;
+}
+.start-mining .base .email .input-email {
+  max-width: 374px;
+  padding: 0;
+  outline: none;
+  border: none;
+  background: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+}
+.start-mining .base .email .input-email::placeholder {
+  color: #fff;
+}
+.start-mining .base .email .btn {
+  padding: 13px 32px;
+  max-width: 152px;
+  background-color: #fff;
+  color: black;
+}
+.start-mining .base .email .btn:hover {
+  background: #3671E9;
+  color: #fff;
+}
+
 footer {
   padding: 200px 0;
 }
@@ -1062,6 +1127,15 @@ footer {
   }
   .features .grow-profit .img-container {
     padding-top: 40px;
+  }
+  .start-mining .base .row {
+    justify-content: center;
+  }
+  .start-mining .base .text-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 @media screen and (max-width: 991px) {
@@ -1182,6 +1256,10 @@ footer {
   }
   .cryptocurrencies .row .slick-list {
     width: 370px;
+  }
+  .start-mining .base .email .row-input {
+    gap: 25px;
+    justify-content: center;
   }
 }
 @media screen and (max-width: 575px) {
