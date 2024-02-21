@@ -224,3 +224,38 @@ const FeaturesRandomElement = ()=>{
     }, 2000);
 }
 document.querySelector('.features') ? FeaturesRandomElement() : null;
+
+const StartMining = ()=>{
+    const selector = document.querySelector('.start-mining')
+    const botton = selector.querySelector('.btn')
+    let inputemail = selector.querySelector('.input-email')
+
+    const messagePage = selector.querySelectorAll('.message-page')
+    const messageSuccessfully = selector.querySelector('.message-page.successfully')
+    const messageNotSuccessfully = selector.querySelector('.message-page.not-successfully')
+
+    //!!!!!!!!!!!!!!!!!!!!!'{}'
+    const removeClass = (selector, className)=>{
+        selector.forEach(item => item.classList.remove(className));
+    }
+    const addClass = (selector, className)=>{
+        selector.classList.add(className);
+    }
+    //!!!!!!!!!!!!!!!!!!!!!!
+
+    botton.addEventListener('click', ()=>{
+        const inputemailinfo = inputemail.value;
+        //console.log(inputemailinfo)
+        if (inputemailinfo === 'kaka'){
+            removeClass(messagePage, 'active')
+            addClass(messageSuccessfully, 'active')
+        }
+        else{
+            removeClass(messagePage, 'active')
+            addClass(messageNotSuccessfully, 'active')
+        }
+        inputemail.value = "";
+    })
+
+}
+document.querySelector('.start-mining') ? StartMining() : null;

@@ -1010,6 +1010,7 @@ header .nav-account #register:hover {
 }
 .features .grow-profit .img-container .base .row-description .element {
   transition: all 1s;
+  width: 100%;
 }
 .features .grow-profit .img-container .base .row-description .element.active {
   padding: 16px 52px 16px 40px;
@@ -1086,6 +1087,35 @@ header .nav-account #register:hover {
 .start-mining .base .email .btn:hover {
   background: #3671E9;
   color: #fff;
+}
+.start-mining .message-page {
+  transform: translateX(50px);
+  opacity: 0;
+  overflow: hidden; /*!important*/
+  position: fixed;
+  max-width: 500px;
+  width: 100%;
+  z-index: -5;
+  top: 12px;
+  right: 12px;
+  border-radius: 16px;
+  background-color: #fff;
+  transition: all 1s;
+}
+.start-mining .message-page .modal-container {
+  padding: 12px 16px;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.start-mining .message-page .modal-container .title-modal {
+  font-size: 18px;
+}
+.start-mining .message-page.active {
+  z-index: 2;
+  opacity: 1;
+  transform: translateX(0);
 }
 
 footer {
@@ -1260,6 +1290,10 @@ footer {
   .start-mining .base .email .row-input {
     gap: 25px;
     justify-content: center;
+  }
+  .start-mining .message-page {
+    right: 50%;
+    transform: translatex(50%);
   }
 }
 @media screen and (max-width: 575px) {
