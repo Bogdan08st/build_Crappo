@@ -1294,6 +1294,11 @@ footer {
   .start-mining .message-page {
     right: 50%;
     transform: translatex(50%);
+    top: -12px;
+  }
+  .start-mining .message-page.active {
+    top: 12px;
+    transform: translatex(50%);
   }
 }
 @media screen and (max-width: 575px) {

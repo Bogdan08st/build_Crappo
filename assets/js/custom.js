@@ -227,7 +227,7 @@ document.querySelector('.features') ? FeaturesRandomElement() : null;
 
 const StartMining = ()=>{
     const selector = document.querySelector('.start-mining')
-    const botton = selector.querySelector('.btn')
+    const button = selector.querySelector('.btn')
     let inputemail = selector.querySelector('.input-email')
 
     const messagePage = selector.querySelectorAll('.message-page')
@@ -243,19 +243,43 @@ const StartMining = ()=>{
     }
     //!!!!!!!!!!!!!!!!!!!!!!
 
-    botton.addEventListener('click', ()=>{
+    button.addEventListener('click', ()=>{
         const inputemailinfo = inputemail.value;
+        const emailVer = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        function manegeClasses(element, addClass, removeClass, zIndex, delay) {
+            setTimeout(()=>{
+                if(removeClass){
+                    element.classList.remove(removeClass)
+                }
+                else if(addClass){
+                    element.classList.add(addClass)
+                }
+                element.style.zIndex = zIndex;
+            }, delay);
+        };
         //console.log(inputemailinfo)
-        if (inputemailinfo === 'kaka'){
-            removeClass(messagePage, 'active')
-            addClass(messageSuccessfully, 'active')
+
+        let userEmailDone
+        if (emailVer.test(inputemailinfo)){
+            manegeClasses(messageSuccessfully, '', '', '2', 0);
+            manegeClasses(messageSuccessfully, 'active', '', '', 500);
+            messagePage.forEach((item) => {
+                manegeClasses(item, '', 'active', '1', 6500);
+                manegeClasses(item, '', '', '-5', 7500);
+            });
+            userEmailDone = inputemailinfo;
         }
         else{
-            removeClass(messagePage, 'active')
-            addClass(messageNotSuccessfully, 'active')
+            manegeClasses(messageNotSuccessfully, '', '', '2', 0);
+            manegeClasses(messageNotSuccessfully, 'active', '', '', 500);
+            messagePage.forEach((item) => {
+                manegeClasses(item, '', 'active', '1', 6500);
+                manegeClasses(item, '', '', '-5', 7500);
+            });
         }
         inputemail.value = "";
-    })
+        console.log(userEmailDone);
+    });
 
 }
 document.querySelector('.start-mining') ? StartMining() : null;
