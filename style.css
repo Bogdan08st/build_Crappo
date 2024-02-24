@@ -103,6 +103,15 @@ a {
   text-decoration: none;
 }
 
+a.default-link {
+  color: #fff;
+}
+
+a.default-link:hover {
+  transition: all 0.1s;
+  color: #3671E9;
+}
+
 .container-xxl {
   max-width: 1226px;
   padding-left: 13px;
@@ -1034,8 +1043,24 @@ header .nav-account #register:hover {
 .start-mining {
   padding: 88px 0;
   background: linear-gradient(180deg, rgb(43, 7, 110), rgb(13, 13, 43) 100%);
+  position: relative;
+}
+.start-mining .before1 {
+  z-index: 0;
+  position: absolute;
+  bottom: 0;
+  right: 15%;
+  transform: translate(-7px, 0px);
+}
+.start-mining .before2 {
+  z-index: 0;
+  position: absolute;
+  bottom: 0;
+  left: 5%;
 }
 .start-mining .base {
+  z-index: 1;
+  position: relative;
   width: 100%;
   max-width: 100%;
   padding: 48px;
@@ -1119,9 +1144,61 @@ header .nav-account #register:hover {
 }
 
 footer {
-  padding: 200px 0;
+  padding: 80px 0;
+}
+footer .row {
+  justify-content: space-between;
+  padding-right: 12px;
+}
+footer .logo {
+  display: inline-block;
+  width: auto;
+}
+footer .logo .default-link {
+  display: flex;
+  width: 137px;
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 1px;
+  text-align: left;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .row-content {
+  width: auto;
+  justify-content: start;
+}
+footer .row-content .title {
+  font-family: Rubik;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0;
+}
+footer .row-content .row-nav {
+  display: flex;
+  gap: 35px;
+  width: auto;
+  padding: 0;
+}
+footer .row-content .quick-link, footer .row-content .resources {
+  width: 200px;
+}
+footer .row-content .payment {
+  width: 367px;
+  margin-left: 93px;
+}
+footer .row-content .payment .title {
+  font-size: 32px;
 }
 
+@media screen and (max-width: 1300px) {
+  .start-mining .before1 {
+    display: none;
+  }
+}
 @media screen and (max-width: 1200px) {
   .features .title {
     margin-bottom: 20px;
@@ -1286,6 +1363,9 @@ footer {
   }
   .cryptocurrencies .row .slick-list {
     width: 370px;
+  }
+  .start-mining .before1 {
+    display: inline-block;
   }
   .start-mining .base .email .row-input {
     gap: 25px;
